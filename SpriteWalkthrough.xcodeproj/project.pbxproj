@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2E7ACCE18B2C49D0093188E /* SpaceshipScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E7ACCD18B2C49D0093188E /* SpaceshipScene.m */; };
 		B2F2996718B25FC7005A2C6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F2996618B25FC7005A2C6D /* Foundation.framework */; };
 		B2F2996918B25FC7005A2C6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F2996818B25FC7005A2C6D /* CoreGraphics.framework */; };
 		B2F2996B18B25FC7005A2C6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F2996A18B25FC7005A2C6D /* UIKit.framework */; };
@@ -21,6 +22,7 @@
 		B2F2998818B25FC7005A2C6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F2996A18B25FC7005A2C6D /* UIKit.framework */; };
 		B2F2999018B25FC7005A2C6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2F2998E18B25FC7005A2C6D /* InfoPlist.strings */; };
 		B2F2999218B25FC7005A2C6D /* SpriteWalkthroughTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F2999118B25FC7005A2C6D /* SpriteWalkthroughTests.m */; };
+		B2F2999D18B260A0005A2C6D /* HelloScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F2999C18B260A0005A2C6D /* HelloScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B2E7ACCC18B2C49D0093188E /* SpaceshipScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceshipScene.h; sourceTree = "<group>"; };
+		B2E7ACCD18B2C49D0093188E /* SpaceshipScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceshipScene.m; sourceTree = "<group>"; };
 		B2F2996318B25FC7005A2C6D /* SpriteWalkthrough.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteWalkthrough.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F2996618B25FC7005A2C6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B2F2996818B25FC7005A2C6D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +57,8 @@
 		B2F2998D18B25FC7005A2C6D /* SpriteWalkthroughTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpriteWalkthroughTests-Info.plist"; sourceTree = "<group>"; };
 		B2F2998F18B25FC7005A2C6D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B2F2999118B25FC7005A2C6D /* SpriteWalkthroughTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpriteWalkthroughTests.m; sourceTree = "<group>"; };
+		B2F2999B18B260A0005A2C6D /* HelloScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloScene.h; sourceTree = "<group>"; };
+		B2F2999C18B260A0005A2C6D /* HelloScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,10 @@
 				B2F2997C18B25FC7005A2C6D /* SpriteViewController.m */,
 				B2F2997E18B25FC7005A2C6D /* Images.xcassets */,
 				B2F2996D18B25FC7005A2C6D /* Supporting Files */,
+				B2F2999B18B260A0005A2C6D /* HelloScene.h */,
+				B2F2999C18B260A0005A2C6D /* HelloScene.m */,
+				B2E7ACCC18B2C49D0093188E /* SpaceshipScene.h */,
+				B2E7ACCD18B2C49D0093188E /* SpaceshipScene.m */,
 			);
 			path = SpriteWalkthrough;
 			sourceTree = "<group>";
@@ -251,6 +261,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2F2997318B25FC7005A2C6D /* main.m in Sources */,
+				B2F2999D18B260A0005A2C6D /* HelloScene.m in Sources */,
+				B2E7ACCE18B2C49D0093188E /* SpaceshipScene.m in Sources */,
 				B2F2997718B25FC7005A2C6D /* SpriteAppDelegate.m in Sources */,
 				B2F2997D18B25FC7005A2C6D /* SpriteViewController.m in Sources */,
 			);
@@ -463,6 +475,7 @@
 				B2F2999718B25FC7005A2C6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B2F2999818B25FC7005A2C6D /* Build configuration list for PBXNativeTarget "SpriteWalkthroughTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +484,7 @@
 				B2F2999A18B25FC7005A2C6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
