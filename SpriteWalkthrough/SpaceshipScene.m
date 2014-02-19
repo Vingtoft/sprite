@@ -7,6 +7,7 @@
 //
 
 #import "SpaceshipScene.h"
+#import "MovingObject.h"
 
 @interface SpaceshipScene ()
 
@@ -25,18 +26,42 @@
     }
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+            
+            SKScene *spaceshipScene  = [[MovingObject alloc] initWithSize:self.size];
+            
+            SKTransition *doors = [SKTransition doorsCloseHorizontalWithDuration:0.5];
+            
+            [self.view presentScene:spaceshipScene transition:doors];
+}
+    
+
+
 - (void)createSceneContents
 {
     self.backgroundColor = [SKColor blackColor];
     self.scaleMode = SKSceneScaleModeAspectFit;
     
     SKSpriteNode *spaceship = [self newSpaceship];
+    SKSpriteNode *spaceship2 = [self newSpaceship];
+    
+    SKSpriteNode *box = [self addBox];
+    
     spaceship.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)-150);
+    spaceship2.position = CGPointMake(CGRectGetMidX(self.frame)+150, CGRectGetMidY(self.frame)+150);
+    
+    box.position = CGPointMake(CGRectGetMidX(self.frame)-300, CGRectGetMidY(self.frame)-300);
+    
+    
+    
     [self addChild:spaceship];
+    [self addChild:spaceship2];
+    
+    [self addChild:box];
     
     SKAction *makeRocks = [SKAction sequence: @[
                                                 [SKAction performSelector:@selector(addRock) onTarget:self],
-                                                [SKAction waitForDuration:0.10 withRange:0.15]
+                                                [SKAction waitForDuration:.1 withRange:0.15]
                                                 ]];
     [self runAction: [SKAction repeatActionForever:makeRocks]];
 }
@@ -47,6 +72,24 @@ static inline CGFloat skRandf() {
 
 static inline CGFloat skRand(CGFloat low, CGFloat high) {
     return skRandf() * (high - low) + low;
+}
+
+- (SKSpriteNode *)addBox
+{
+    SKSpriteNode *box = [[SKSpriteNode alloc] initWithColor:[SKColor whiteColor] size: CGSizeMake(400, 1)];
+    box.position = CGPointMake(50, 50);
+    box.name = @"box";
+    box.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:box.size];
+    
+    box.physicsBody.dynamic = NO;
+    
+    SKAction *movement = [SKAction sequence:@[[SKAction waitForDuration:2.0],
+                                              [SKAction moveByX:20 y:1000 duration:5.0],
+                                              [SKAction waitForDuration:0.5],
+                                              [SKAction moveByX:-20 y:-1000 duration:2]]];
+    [box runAction:[SKAction repeatActionForever:movement]];
+    
+    return box;
 }
 
 - (void)addRock
@@ -93,6 +136,7 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
                                            [SKAction moveByX:-100.0 y:-50 duration:1.0]]];
     //enable it
     [hull runAction: [SKAction repeatActionForever:hover]];
+    
     return hull;
 }
 

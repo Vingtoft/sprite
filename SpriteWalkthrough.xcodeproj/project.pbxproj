@@ -23,6 +23,7 @@
 		B2F2999018B25FC7005A2C6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2F2998E18B25FC7005A2C6D /* InfoPlist.strings */; };
 		B2F2999218B25FC7005A2C6D /* SpriteWalkthroughTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F2999118B25FC7005A2C6D /* SpriteWalkthroughTests.m */; };
 		B2F2999D18B260A0005A2C6D /* HelloScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F2999C18B260A0005A2C6D /* HelloScene.m */; };
+		D7C5DE7118B3EFB10044731D /* MovingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C5DE7018B3EFB10044731D /* MovingObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		B2F2999118B25FC7005A2C6D /* SpriteWalkthroughTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpriteWalkthroughTests.m; sourceTree = "<group>"; };
 		B2F2999B18B260A0005A2C6D /* HelloScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloScene.h; sourceTree = "<group>"; };
 		B2F2999C18B260A0005A2C6D /* HelloScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloScene.m; sourceTree = "<group>"; };
+		D7C5DE6F18B3EFB10044731D /* MovingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingObject.h; sourceTree = "<group>"; };
+		D7C5DE7018B3EFB10044731D /* MovingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 				B2F2999C18B260A0005A2C6D /* HelloScene.m */,
 				B2E7ACCC18B2C49D0093188E /* SpaceshipScene.h */,
 				B2E7ACCD18B2C49D0093188E /* SpaceshipScene.m */,
+				D7C5DE6F18B3EFB10044731D /* MovingObject.h */,
+				D7C5DE7018B3EFB10044731D /* MovingObject.m */,
 			);
 			path = SpriteWalkthrough;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7C5DE7118B3EFB10044731D /* MovingObject.m in Sources */,
 				B2F2997318B25FC7005A2C6D /* main.m in Sources */,
 				B2F2999D18B260A0005A2C6D /* HelloScene.m in Sources */,
 				B2E7ACCE18B2C49D0093188E /* SpaceshipScene.m in Sources */,

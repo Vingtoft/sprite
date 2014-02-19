@@ -26,8 +26,6 @@
     }
 }
 
-
-
 - (void)createSceneContents
 {
     self.backgroundColor = [SKColor blueColor];
